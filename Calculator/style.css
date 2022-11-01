@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin-top: 100px;
+    background: gray;
+    width: 80%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(6,1fr);
+}
+.output{
+    grid-column: 1/span 4;
+}
+.span-two{
+    grid-column: 1/span 2;
+}
+.span-tw{
+    grid-column:3/5;
+}
+.button{
+    font-size: 50px;
+}
+.button:hover{
+    background: pink;
+}
+.output{
+    font-size: 3.4rem;
+    display: flex;
+    text-align: right;
+}
