@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&family=Tektur:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right,green,rgb(187, 221, 187));
+   
+}
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-text{
+    text-align: center;
+    font-size: large;
+    width: 30%;
+    padding: 30px;
+    margin-left: 50px;
+    color: aliceblue;
+}
+h1{
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: whitesmoke;
+}
+
+
+.gallery{
+    flex-basis: 50%;
+    height: 500px;
+    display: grid;
+    /* background: pink; */
+    margin-right: 30px;
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 'mount mount mount water'
+                        'land land land water'
+                         'sun sun sun sun';
+    grid-auto-rows: 150px;
+}
+.box{
+    background-size: cover;
+    background-position: top;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-blend-mode:hard-light;
+    transition: all 1s ease-in-out;
+}
+.box:hover{
+    background-color: rgb(79, 66, 66);
+    /* color:black; */
+}
+.b1{
+    grid-area:mount ;
+}
+.b1:hover{
+    background-position:right;
+}
+.b2{
+    grid-area:land ;
+    background-position: bottom;
+}
+.b2:hover{
+    background-position:left;
+}
+.b3{
+    grid-area:water ;
+}
+.b6{
+    grid-area:sun ;
+    background-position: center;
+}
+.b6:hover{
+    background-position:bottom;
+}
+
+@media screen and (max-width:1024px) {
+    .container{
+        flex-direction: column;
+    }
+    .left-text{
+        width: 100%;
+        margin: 0 auto;
+        color: black;
+    }
+    .gallery{
+        width: 70%;
+        margin: 0 auto;
+    }
+   .box{
+    grid-row:span 1;
+    grid-column: span 3;
+    width: 100%;
+   }
+}
